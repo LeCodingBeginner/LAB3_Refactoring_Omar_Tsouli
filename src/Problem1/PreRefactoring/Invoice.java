@@ -34,6 +34,7 @@ public class Invoice {
     private String line(String label, double value) {
         return String.format("%-12s %8.2f%n", label, value);
     }
+    // the saving method:
     public void save() throws IOException {
         try (FileWriter fw = new FileWriter(customer + ".txt")) {
             fw.write(print());
